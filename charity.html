@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Trust Website</title>
+    <style>
+        /* General styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f47c3c;
+            padding: 10px 20px;
+            color: white;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            background: url('https://statustown.com/wp-content/uploads/englishstatusimages/Encouraging-Quotes-5983.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .banner p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .banner button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f47c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .banner button:hover {
+            background-color: #e76a2a;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #f47c3c;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Donation Form */
+        .donation-form {
+            display: none;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .donation-form h2 {
+            margin-bottom: 20px;
+        }
+        .donation-form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        .donation-form input,
+        .donation-form select,
+        .donation-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .donation-form button {
+            background-color: #f47c3c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .donation-form button:hover {
+            background-color: #e76a2a;
+        }
+        .qr-code {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .qr-code img {
+            width: 200px;
+        }
+        .qr-code button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Charity Trust</div>
+        <nav>
+            <a href="#about">Who We Are</a>
+            <a href="#work">Our Work</a>
+            <a href="#donate">Donate</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="banner">
+       
+    </div>
+    <section id="work" class="section">
+        <h2>Our Work</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://static.wixstatic.com/media/8c8e4f_abbb542c658044378f874a1adfd2848d~mv2.jpeg" alt="Food Rescue">
+                <h3><a href="food-rescue.html" target="_blank">Food Rescue</a></h3>
+                <p>Helping save fresh produce and feeding families in need.</p>
+            </div>
+                <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.MuTWK6YqRuxaIrlPlgQKHQHaE8?w=3456&h=2304&rs=1&pid=ImgDetMain" alt="Child Hunger">
+        <h3><a href="#child-hunger">Child Hunger</a></h3>
+        <p>Providing meals to children across the globe.</p>
+    </div>
+    <div class="card">
+        <img src="https://purposefulpolitics.com/wp-content/uploads/2023/01/political-campaign-volunteers-2-768x512.jpg" alt="Volunteers">
+        <h3><a href="#volunteers">Volunteers</a></h3>
+        <p>Join hands with us and bring change together.</p>
+    </div>
+    <div class="card">
+        <img src="https://media.whas11.com/assets/WHAS/images/f137c339-a769-4f5d-8784-fcc694a7f8af/f137c339-a769-4f5d-8784-fcc694a7f8af_1140x641.jpg" alt="Healthcare and Rehabilitation">
+        <h3><a href="#healthcare-rehabilitation">Healthcare and Rehabilitation</a></h3>
+        <p>Providing free eye checkups, surgeries, and assistive devices.</p>
+    </div>
+    <div class="card">
+        <img src="https://th.bing.com/th/id/OIP._f8B8cy6y1ikJuoW9hcxvwHaEc?rs=1&pid=ImgDetMain" alt="Community Support">
+        <h3><a href="#community-support">Community Support</a></h3>
+        <p>Engaging communities to fight against hunger.</p>
+    </div>
+    <div class="card">
+        <img src="https://blog.vancity.com/wp-content/uploads/2016/12/GiveHands-iStock-Blog-1280x620-1280x620.jpg" alt="Money">
+        <h3><a href="#donations">Donations</a></h3>
+        <p>Your generous contributions make our work possible.</p>
+    </div>
+    <div class="card">
+        <img src="https://en-media.thebetterindia.com/uploads/2017/03/banner3.jpg" alt="Education and Training">
+        <h3><a href="#education-training">Education and Training</a></h3>
+        <p>Empowering the visually impaired with skills for independence.</p>
+    </div>
+        </div>
+    </section>
+    <section id="donate" class="section" style="background-color: #f7f7f7;">
+        <h2>Make a Difference</h2>
+        <p>Your generous donation helps us provide meals to those in need.</p>
+        <button onclick="showDonationForm()">Donate Now</button>
+        <div class="donation-form">
+            <h2>Donate Now</h2>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <label for="category">Category</label>
+            <select id="category">
+                <option>Food Rescue</option>
+                <option>Child Hunger</option>
+                <option>Education and Training</option>
+                <option>Healthcare and Rehabilitation</option>
+            </select>
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter the amount">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter your phone number">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="submitDonation()">Proceed to Payment</button>
+            <div class="qr-code">
+                <h3>Scan to Pay</h3>
+                <img src="https://via.placeholder.com/200" alt="QR Code">
+                <p>Upload payment proof:</p>
+                <input type="file" id="proof">
+                <button onclick="saveDonation()">Submit</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Charity Trust. All rights reserved.</p>
+        <p><a href="#contact">Contact Us</a> | <a href="#about">Privacy Policy</a></p>
+    </footer>
+    <script>
+        function showDonationForm() {
+            document.querySelector('.donation-form').style.display = 'block';
+        }
+
+        function showQRCode() {
+            document.querySelector('.qr-code').style.display = 'block';
+        }
+
+        function submitDonation() {
+            alert('Thank you for your generous donation!');
+        }
+
+        // Function to save donation details to localStorage
+        function saveDonation() {
+            const name = document.getElementById('name').value.trim();
+            const category = document.getElementById('category').value;
+            const amount = document.getElementById('amount').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!name || !category || !amount || !phone || !email) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const donation = {
+                name,
+                category,
+                amount,
+                phone,
+                email,
+                date: new Date().toLocaleString()
+            };
+
+            // Retrieve previous donations
+            let donations = JSON.parse(localStorage.getItem('donations')) || [];
+
+            // Add new donation to the list
+            donations.push(donation);
+
+            // Save updated donations list back to localStorage
+            localStorage.setItem('donations', JSON.stringify(donations));
+
+            alert('Donation details saved successfully!');
+        }
+    </script>
+</body>
+</html>

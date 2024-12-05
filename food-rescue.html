@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Rescue - Charity Trust</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f47c3c;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        section h2 {
+            margin-bottom: 10px;
+        }
+        section p {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .gallery {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 30%;
+            border-radius: 5px;
+        }
+        .cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cta button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #f47c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cta button:hover {
+            background-color: #e76a2a;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .donation-form {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .donation-form input, .donation-form select, .donation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .donation-form button {
+            background-color: #f47c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .donation-form button:hover {
+            background-color: #e76a2a;
+        }
+        .donation-form input[type="file"] {
+            padding: 5px;
+        }
+    </style>
+    <!-- Include the jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Food Rescue</h1>
+    </header>
+
+    <section>
+        <h2>About Food Rescue</h2>
+        <p>
+            Our Food Rescue program is dedicated to saving surplus food from farms, markets, and restaurants
+            and redistributing it to families and communities in need. Together, we combat food waste and hunger.
+        </p>
+    </section>
+	    <section>
+    <h2>How It Works</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 20px;">
+            <strong>Step 1:</strong> Collect surplus food from local partners.
+            <br>
+            <img src="https://th.bing.com/th/id/OIP.jFGIQ5Zp57C390bf5yN9YgHaE8?w=843&h=562&rs=1&pid=ImgDetMain" alt="Collecting food" style="width: 100%; max-width: 300px; margin-top: 10px; border-radius: 10px;">
+        </li>
+        <li style="margin-bottom: 20px;">
+            <strong>Step 2:</strong> Sort and ensure food quality for redistribution.
+            <br>
+            <img src="https://www.researchgate.net/publication/287202638/figure/fig7/AS:614276557447169@1523466352157/Scheme-of-interactions-between-redistribution-activities-and-stakeholders-along-the-food.png" alt="Sorting food" style="width: 100%; max-width: 300px; margin-top: 10px; border-radius: 10px;">
+        </li>
+        <li style="margin-bottom: 20px;">
+            <strong>Step 3:</strong> Deliver food to shelters, schools, and families in need.
+            <br>
+            <img src="https://th.bing.com/th/id/OIP.OGuC0wnVkhQucHWUROnsXQHaFj?w=1024&h=768&rs=1&pid=ImgDetMain" alt="Delivering food" style="width: 100%; max-width: 300px; margin-top: 10px; border-radius: 10px;">
+        </li>
+    </ul>
+</section>
+<section>
+        <h2>Our Impact</h2>
+        <p>Since the program's inception, we have achieved:</p>
+        <ul>
+            <li>Saved <strong>5 million kg</strong> of surplus food.</li>
+            <li>Fed <strong>2 million people</strong>.</li>
+            <li>Partnered with <strong>500+ organizations</strong>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Stories of Change</h2>
+        <p>
+            Meet Ananya, a mother of two who now receives fresh, healthy meals for her family every week, thanks to
+            our Food Rescue program. Her story is one of many that drives our mission forward.
+        </p>
+    </section>
+
+    <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2023/06/iStock-1430271338.jpg" alt="Food Collection">
+            <img src="https://thumbs.dreamstime.com/z/happy-volunteers-holding-donation-cardboxes-humanitarian-aid-assistance-project-stock-photo-159232480.jpg" alt="Volunteers in Action">
+            <img src="https://i.ytimg.com/vi/kjGgh6V4fYU/maxresdefault.jpg" alt="Beneficiary Family">
+        </div>
+    </section>
+
+    <section>
+        <h2>FAQs</h2>
+        <p><strong>Q: What kind of food is rescued?</strong></p>
+        <p>A: We collect fresh produce, packaged goods, and cooked meals from certified partners.</p>
+        <p><strong>Q: How can I contribute?</strong></p>
+        <p>A: You can donate, volunteer, or become a partner organization.</p>
+    </section>
+
+    <section class="cta">
+        <h2>Be the Change</h2>
+        <p>Together, we can eliminate food waste and hunger. Join us in creating a better future.</p>
+        <button onclick="showDonationForm()">Donate Now</button>
+    </section>
+
+    <div class="donation-form" id="donationForm">
+        <h2>Donate Food</h2>
+        <form id="donationDetails">
+            <!-- Customer Information -->
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerContact">Your Contact:</label>
+            <input type="text" id="customerContact" name="customerContact" required>
+
+            <label for="customerAddress">Your Address:</label>
+            <textarea id="customerAddress" name="customerAddress" required></textarea>
+
+            <!-- Food Donation Details -->
+            <label for="foodType">Type of Food:</label>
+            <input type="text" id="foodType" name="foodType" required>
+
+            <label for="quantity">Quantity (kg):</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="volunteers">Do you need volunteers?</label>
+            <select id="volunteers" name="volunteers">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="foodImage">Upload Food Image:</label>
+            <input type="file" id="foodImage" name="foodImage" accept="image/*" required>
+
+            <button type="submit">Submit Donation</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Charity Trust. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the donation form
+        function showDonationForm() {
+            document.getElementById('donationForm').style.display = 'block';
+        }
+
+        // Handle form submission
+        document.getElementById('donationDetails').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const customerName = document.getElementById('customerName').value.trim();
+            const customerContact = document.getElementById('customerContact').value.trim();
+            const customerAddress = document.getElementById('customerAddress').value.trim();
+            const foodType = document.getElementById('foodType').value.trim();
+            const quantity = document.getElementById('quantity').value.trim();
+            const volunteers = document.getElementById('volunteers').value;
+            const foodImage = document.getElementById('foodImage').files[0];
+
+            if (!customerName || !customerContact || !customerAddress || !foodType || !quantity || !foodImage) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Create a PDF using jsPDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Add customer details to the PDF
+            doc.text('Donation Details:', 20, 20);
+            doc.text(`Name: ${customerName}`, 20, 30);
+            doc.text(`Contact: ${customerContact}`, 20, 40);
+            doc.text(`Address: ${customerAddress}`, 20, 50);
+            doc.text(`Food Type: ${foodType}`, 20, 60);
+            doc.text(`Quantity (kg): ${quantity}`, 20, 70);
+            doc.text(`Volunteers Needed: ${volunteers}`, 20, 80);
+
+            // Add food image to the PDF (if available)
+            if (foodImage) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgData = e.target.result;
+                    doc.addImage(imgData, 'JPEG', 20, 90, 100, 80); // Adjust image position and size
+                    doc.save(`${customerName}_Donation.pdf`);
+                };
+                reader.readAsDataURL(foodImage);
+            } else {
+                doc.save(`${customerName}_Donation.pdf`);
+            }
+
+            // Reload the page after generating PDF
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>
